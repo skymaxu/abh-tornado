@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <script src="http://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- header -->
+<div class="banner1">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/index"><img src="../static/images/logo.png" class="img-responsive" alt=""/></a>
+            </div>
+            <div class="head-nav">
+                <span class="menu"> </span>
+                <ul>
+                    <li><a href="/index">首页</a></li>
+                    <li><a href="/products">产品</a></li>
+                    <li><a href="/services">服务</a></li>
+                    <li class="active"><a href="/contact">关于</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <!-- script-for-nav -->
+            <script>
+                $("span.menu").click(function () {
+                    $(".head-nav ul").slideToggle(300, function () {
+                        // Animation complete.
+                    });
+                });
+            </script>
+            <!-- script-for-nav -->
+        </div>
+    </div>
+    <div class="container">
+        <h2>Contact</h2>
+    </div>
+</div>
+<!-- header -->
+<!-- contact-section -->
+<div class="contact-section">
+    <div class="container">
+        <div class="map">
+            <img src="../static/images/team-dream.jpg" style="height: 100%;width: 100%">
+            <!--<iframe src="/demo/demomap.html" width="" height="" frameborder="0" style="border:0"></iframe>-->
+        </div>
+        <div class="get-touch">
+            <h5>联系我们</h5>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
+                in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+                vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
+                dolore te feugait nulla facilisi.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+
+            <div class="col-md-12 get-touch1">
+                <form>
+                    <input type="text" class="text" value="FIRST NAME" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'FIRST NAME';}">
+                    <input type="text" class="text" value="LAST NAME" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'LAST NAME';}">
+                    <input type="text" class="text" value="E-MAIL ADDRESS" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'E-MAIL ADDRESS ';}">
+                </form>
+                <div class="text-field-area-">
+                    <form>
+                        <textarea value="MESSAGE:" onfocus="if(this.value == 'MESSAGE') this.value='';"
+                                  onblur="if(this.value == '') this.value='MESSAGE';">MESSAGE</textarea>
+                    </form>
+                </div>
+                <div class="button-1">
+                    <form>
+                        <input type="submit" value="send message">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact-section  -->
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <p>Copyright &copy; 2015.爱博华科技 All rights reserved</p>
+    </div>
+</div>
+<!-- footer -->
+
+</body>
+</html>

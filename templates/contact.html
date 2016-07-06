@@ -1,22 +1,7 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Home</title>
-    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="application/x-javascript"> addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
-    }, false);
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    } </script>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-    <script src="http://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
-</head>
-<body>
+{% extends "base\init.html" %}
+
+
+{% block header %}
 <!-- header -->
 <div class="banner1">
     <div class="header">
@@ -51,6 +36,9 @@
     </div>
 </div>
 <!-- header -->
+{% end %}
+
+{% block body%}
 <!-- contact-section -->
 <div class="contact-section">
     <div class="container">
@@ -61,30 +49,30 @@
         <div class="get-touch">
             <h5>联系我们</h5>
 
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
-                in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-                vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-                dolore te feugait nulla facilisi.</p>
+            <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut-->
+                <!--laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation-->
+                <!--ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor-->
+                <!--in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at-->
+                <!--vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis-->
+                <!--dolore te feugait nulla facilisi.</p>-->
 
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+            <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut-->
+                <!--laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation-->
+                <!--ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>-->
 
             <div class="col-md-12 get-touch1">
-                <form>
-                    <input type="text" class="text" value="FIRST NAME" onfocus="this.value = '';"
-                           onblur="if (this.value == '') {this.value = 'FIRST NAME';}">
-                    <input type="text" class="text" value="LAST NAME" onfocus="this.value = '';"
-                           onblur="if (this.value == '') {this.value = 'LAST NAME';}">
-                    <input type="text" class="text" value="E-MAIL ADDRESS" onfocus="this.value = '';"
-                           onblur="if (this.value == '') {this.value = 'E-MAIL ADDRESS ';}">
+                <form action="post">
+                    <input type="text" class="text" value="USERNAME/用户名" name="username" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'USERNAME/用户名';}">
+                    <!--<input type="text" class="text" value="LAST NAME" onfocus="this.value = '';"-->
+                           <!--onblur="if (this.value == '') {this.value = 'LAST NAME';}">-->
+                    <input type="text" class="text" value="EMAIL ADDRESS/邮件地址" name="email" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'EMAIL ADDRESS/邮件地址';}">
                 </form>
                 <div class="text-field-area-">
                     <form>
-                        <textarea value="MESSAGE:" onfocus="if(this.value == 'MESSAGE') this.value='';"
-                                  onblur="if(this.value == '') this.value='MESSAGE';">MESSAGE</textarea>
+                        <textarea value="message" name="message" onfocus="if(this.value == 'MESSAGE') this.value='';"
+                                  onblur="if(this.value == '') this.value='MESSAGE';">MESSAGE/消息</textarea>
                     </form>
                 </div>
                 <div class="button-1">
@@ -97,13 +85,4 @@
     </div>
 </div>
 <!-- contact-section  -->
-<!-- footer -->
-<div class="footer">
-    <div class="container">
-        <p>Copyright &copy; 2015.爱博华科技 All rights reserved</p>
-    </div>
-</div>
-<!-- footer -->
-
-</body>
-</html>
+{% end %}

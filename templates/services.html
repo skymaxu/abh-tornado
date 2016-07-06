@@ -1,26 +1,7 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Home</title>
-<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-<script src="http://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
- <link rel="stylesheet" href="../static/css/swipebox.css">
- <!------ Light Box ------>
-    <script src="../static/js/jquery.swipebox.min.js"></script>
-    <script type="text/javascript">
-		jQuery(function($) {
-			$(".swipebox").swipebox();
-		});
-	</script>
-    <!------ Eng Light Box ------>
-</head>
-<body>
+{% extends "base\init.html" %}
+
+
+{% block header %}
 <!-- header -->
 	<div class="banner1">
 		<div class="header">
@@ -48,13 +29,16 @@
 						});
 					</script>
 				<!-- script-for-nav -->
-			</div> 
+			</div>
 		</div>
-		<div class="container">	
+		<div class="container">
 			<h2>Services</h2>
 		</div>
 	</div>
-<!-- header -->	
+<!-- header -->
+{% end %}
+
+{% block body%}
 <!-- service -->
 <div class="service-section">
 	<div class="container">
@@ -63,7 +47,7 @@
 	 <div class="portfolio"  id="portfolio">
 				<div id="portfoliolist">
 					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">		
+						<div class="portfolio-wrapper grid_box">
 							<a href="../static/images/service-ads.png" class="swipebox"  title="广告设计"> <img src="../static/images/service-ads.png" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 							<h3>广告设计</h3>
 							<p>平面设计、视觉识别系统设计、3D设计、互联网企业网站设计、多媒体动画制作、户外广告、报纸、杂志、影视媒体制作、新闻发布会以及企业产品发布会等。</p>
@@ -71,45 +55,45 @@
 		                </div>
 					</div>
 					<div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">		
+						<div class="portfolio-wrapper grid_box">
 							 <a href="../static/images/service-application.png" class="swipebox"  title="应用开发"> <img src="../static/images/service-application.png" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 							 <h3>应用开发</h3>
 							<p>企业级应用网站，企业ERP系统，定制化web服务功能；移动端android、ios、微信公众号系列开发；专业为您提供全方位思路到方案落地的一站式解决方案。</p>
 							<!--<a class="read" href="#">Read More</a>-->
 		                </div>
-					</div>					
-					
+					</div>
+
 					<div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">		
+						<div class="portfolio-wrapper grid_box">
 							 <a href="../static/images/servicce-data.png" class="swipebox"  title="数据分析"> <img src="../static/images/servicce-data.png" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 							 <h3>数据分析</h3>
 							<p>根据客户提交的数据资料，并结合当前业界大数据进行分析，提取关键信息，形成结论报告，帮助客户作出更好的判断，以便在商业竞争中采取适当行动。</p>
 							<!--<a class="read" href="#">Read More</a>-->
 		                </div>
-					</div>	
+					</div>
 					<div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">		
+						<div class="portfolio-wrapper grid_box">
 							 <a href="../static/images/service-operation.png" class="swipebox"  title="运营托管"> <img src="../static/images/service-operation.png" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 							 <h3>运营服务</h3>
 							<p>包括系统服务平台的搭建，平台维护，内容维护，以及服务平台一系列活动的策划，口碑营销、数据监测与反馈评估等，助力于中小企业安心业务运营。</p>
 							<!--<a class="read" href="#">Read More</a>-->
 		                </div>
-					</div>							
-					<div class="clearfix"></div>					
+					</div>
+					<div class="clearfix"></div>
 				</div>
 					<div class="clearfix"></div>
     </div>
 
-	
+
 	  <!-- Script for gallery Here -->
 				<script type="text/javascript" src="../static/js/jquery.mixitup.min.js"></script>
 					<script type="text/javascript">
 					$(function () {
-						
+
 						var filterList = {
-						
+
 							init: function () {
-							
+
 								// MixItUp plugin
 								// http://mixitup.io
 								$('#portfoliolist').mixitup({
@@ -119,46 +103,37 @@
 									easing: 'snap',
 									// call the hover effect
 									onMixEnd: filterList.hoverEffect()
-								});				
-							
+								});
+
 							},
-							
+
 							hoverEffect: function () {
-							
+
 								// Simple parallax effect
 								$('#portfoliolist .portfolio').hover(
 									function () {
 										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
-										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
 									},
 									function () {
 										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
-										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
-									}		
-								);				
-							
+										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+									}
+								);
+
 							}
-				
+
 						};
-						
+
 						// Run the show!
 						filterList.init();
-						
-						
-					});	
+
+
+					});
 					</script>
 <!-- portfolio-section  -->
-		
+
 		</div>
 </div>
 <!-- service -->
-<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<p>Copyright &copy; 2015.爱博华科技 All rights reserved.</p>
-		</div>	
-	</div>
-<!-- footer -->
-
-</body>
-</html>
+{% end %}

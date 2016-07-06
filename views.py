@@ -50,3 +50,6 @@ class ServicesHandler(BaseHandler):
 class ContactHandler(BaseHandler):
     def get(self, *args, **kwargs):
         return self.render('contact.html')
+class InitHandler(BaseHandler):
+    def get(self, *args, **kwargs):
+        return self.render('base\init.html')

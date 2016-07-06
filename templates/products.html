@@ -1,17 +1,7 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Home</title>
-<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-<script src="http://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
-</head>
-<body>
+{% extends "base\init.html" %}
+
+
+{% block header %}
 <!-- header -->
 	<div class="banner1">
 		<div class="header">
@@ -39,13 +29,16 @@
 						});
 					</script>
 				<!-- script-for-nav -->
-			</div> 
+			</div>
 		</div>
-		<div class="container">	
+		<div class="container">
 			<h2>Products</h2>
 		</div>
 	</div>
-<!-- header -->	
+<!-- header -->
+{% end %}
+
+{% block body%}
 <!-- products -->
 	<div class="products">
 		<div class="container">
@@ -130,13 +123,4 @@
 		</div>
 	</div>
 <!-- products -->
-<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<p>Copyright &copy; 2015.爱博华科技 All rights reserved.</p>
-		</div>	
-	</div>
-<!-- footer -->
-
-</body>
-</html>
+{% end %}
